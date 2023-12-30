@@ -1,0 +1,534 @@
+@charset "utf-8";
+.alerts {
+    position: fixed;
+    z-index: 100;
+}
+
+.alerts--default {
+    width: 100%;
+}
+
+[dir=ltr] .alerts--default {
+    left: 0;
+}
+
+[dir=rtl] .alerts--default {
+    right: 0;
+}
+
+.alerts--default .alert {
+    overflow: hidden;
+}
+
+.alerts--default .alert--default {
+    color: var(--primary-text-color);
+}
+
+[dir] .alerts--default .alert--default {
+    background-color: var(--primary-bg-color-always);
+}
+
+.alerts--default .alert--default .alert__body {
+    color: var(--secondary-text-color);
+}
+
+.alerts--default .alert--default .alert__close {
+    color: var(--secondary-text-color);
+}
+
+.alerts--default .alert--default .alert__close:hover {
+    color: var(--primary-color);
+}
+
+[dir] .alerts--default .alert--info {
+    background-color: var(--info-color);
+}
+
+[dir] .alerts--default .alert--success {
+    background-color: var(--success-color);
+}
+
+[dir] .alerts--default .alert--warning {
+    background-color: var(--warning-color);
+}
+
+[dir] .alerts--default .alert--danger {
+    background-color: var(--danger-color);
+}
+
+.alerts--default .alert--info,
+.alerts--default .alert--success,
+.alerts--default .alert--warning,
+.alerts--default .alert--danger {
+    color: #fff;
+}
+
+.alerts--default .alert--info a,
+.alerts--default .alert--success a,
+.alerts--default .alert--warning a,
+.alerts--default .alert--danger a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.alerts--default .alert--info a:hover,
+.alerts--default .alert--success a:hover,
+.alerts--default .alert--warning a:hover,
+.alerts--default .alert--danger a:hover {
+    text-decoration: none;
+}
+
+.alerts--tl,
+.alerts--tc,
+.alerts--tr,
+.alerts--bl,
+.alerts--bc,
+.alerts--br {
+    width: calc(100% - 16px);
+    max-width: 480px;
+}
+
+[dir] .alerts--tl .alert+.alert,
+[dir] .alerts--tc .alert+.alert,
+[dir] .alerts--tr .alert+.alert,
+[dir] .alerts--bl .alert+.alert,
+[dir] .alerts--bc .alert+.alert,
+[dir] .alerts--br .alert+.alert {
+    padding-top: 8px;
+}
+
+.alerts--tl .alert__container,
+.alerts--tc .alert__container,
+.alerts--tr .alert__container,
+.alerts--bl .alert__container,
+.alerts--bc .alert__container,
+.alerts--br .alert__container {
+    color: #fff;
+    overflow: hidden;
+}
+
+[dir] .alerts--tl .alert__container,
+[dir] .alerts--tc .alert__container,
+[dir] .alerts--tr .alert__container,
+[dir] .alerts--bl .alert__container,
+[dir] .alerts--bc .alert__container,
+[dir] .alerts--br .alert__container {
+    border-radius: var(--border-radius-small);
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12);
+}
+
+[dir=ltr] .alerts--tl .alert__container,
+[dir=ltr] .alerts--tc .alert__container,
+[dir=ltr] .alerts--tr .alert__container,
+[dir=ltr] .alerts--bl .alert__container,
+[dir=ltr] .alerts--bc .alert__container,
+[dir=ltr] .alerts--br .alert__container {
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+[dir=rtl] .alerts--tl .alert__container,
+[dir=rtl] .alerts--tc .alert__container,
+[dir=rtl] .alerts--tr .alert__container,
+[dir=rtl] .alerts--bl .alert__container,
+[dir=rtl] .alerts--bc .alert__container,
+[dir=rtl] .alerts--br .alert__container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.alerts--tl .alert--default .alert__container,
+.alerts--tc .alert--default .alert__container,
+.alerts--tr .alert--default .alert__container,
+.alerts--bl .alert--default .alert__container,
+.alerts--bc .alert--default .alert__container,
+.alerts--br .alert--default .alert__container {
+    color: var(--primary-text-color);
+}
+
+[dir] .alerts--tl .alert--default .alert__container,
+[dir] .alerts--tc .alert--default .alert__container,
+[dir] .alerts--tr .alert--default .alert__container,
+[dir] .alerts--bl .alert--default .alert__container,
+[dir] .alerts--bc .alert--default .alert__container,
+[dir] .alerts--br .alert--default .alert__container {
+    background-color: var(--primary-bg-color-always);
+}
+
+.alerts--tl .alert--default .alert__container .alert__body,
+.alerts--tc .alert--default .alert__container .alert__body,
+.alerts--tr .alert--default .alert__container .alert__body,
+.alerts--bl .alert--default .alert__container .alert__body,
+.alerts--bc .alert--default .alert__container .alert__body,
+.alerts--br .alert--default .alert__container .alert__body {
+    color: var(--secondary-text-color);
+}
+
+.alerts--tl .alert--default .alert__container .alert__close,
+.alerts--tc .alert--default .alert__container .alert__close,
+.alerts--tr .alert--default .alert__container .alert__close,
+.alerts--bl .alert--default .alert__container .alert__close,
+.alerts--bc .alert--default .alert__container .alert__close,
+.alerts--br .alert--default .alert__container .alert__close {
+    color: var(--secondary-text-color);
+}
+
+.alerts--tl .alert--default .alert__container .alert__close:hover,
+.alerts--tc .alert--default .alert__container .alert__close:hover,
+.alerts--tr .alert--default .alert__container .alert__close:hover,
+.alerts--bl .alert--default .alert__container .alert__close:hover,
+.alerts--bc .alert--default .alert__container .alert__close:hover,
+.alerts--br .alert--default .alert__container .alert__close:hover {
+    color: var(--primary-color);
+}
+
+[dir] .alerts--tl .alert--info .alert__container,
+[dir] .alerts--tc .alert--info .alert__container,
+[dir] .alerts--tr .alert--info .alert__container,
+[dir] .alerts--bl .alert--info .alert__container,
+[dir] .alerts--bc .alert--info .alert__container,
+[dir] .alerts--br .alert--info .alert__container {
+    background-color: var(--info-color);
+}
+
+[dir] .alerts--tl .alert--success .alert__container,
+[dir] .alerts--tc .alert--success .alert__container,
+[dir] .alerts--tr .alert--success .alert__container,
+[dir] .alerts--bl .alert--success .alert__container,
+[dir] .alerts--bc .alert--success .alert__container,
+[dir] .alerts--br .alert--success .alert__container {
+    background-color: var(--success-color);
+}
+
+[dir] .alerts--tl .alert--warning .alert__container,
+[dir] .alerts--tc .alert--warning .alert__container,
+[dir] .alerts--tr .alert--warning .alert__container,
+[dir] .alerts--bl .alert--warning .alert__container,
+[dir] .alerts--bc .alert--warning .alert__container,
+[dir] .alerts--br .alert--warning .alert__container {
+    background-color: var(--warning-color);
+}
+
+[dir] .alerts--tl .alert--danger .alert__container,
+[dir] .alerts--tc .alert--danger .alert__container,
+[dir] .alerts--tr .alert--danger .alert__container,
+[dir] .alerts--bl .alert--danger .alert__container,
+[dir] .alerts--bc .alert--danger .alert__container,
+[dir] .alerts--br .alert--danger .alert__container {
+    background-color: var(--danger-color);
+}
+
+.alerts--tl .alert--info .alert__container a,
+.alerts--tl .alert--success .alert__container a,
+.alerts--tl .alert--warning .alert__container a,
+.alerts--tl .alert--danger .alert__container a,
+.alerts--tc .alert--info .alert__container a,
+.alerts--tc .alert--success .alert__container a,
+.alerts--tc .alert--warning .alert__container a,
+.alerts--tc .alert--danger .alert__container a,
+.alerts--tr .alert--info .alert__container a,
+.alerts--tr .alert--success .alert__container a,
+.alerts--tr .alert--warning .alert__container a,
+.alerts--tr .alert--danger .alert__container a,
+.alerts--bl .alert--info .alert__container a,
+.alerts--bl .alert--success .alert__container a,
+.alerts--bl .alert--warning .alert__container a,
+.alerts--bl .alert--danger .alert__container a,
+.alerts--bc .alert--info .alert__container a,
+.alerts--bc .alert--success .alert__container a,
+.alerts--bc .alert--warning .alert__container a,
+.alerts--bc .alert--danger .alert__container a,
+.alerts--br .alert--info .alert__container a,
+.alerts--br .alert--success .alert__container a,
+.alerts--br .alert--warning .alert__container a,
+.alerts--br .alert--danger .alert__container a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.alerts--tl .alert--info .alert__container a:hover,
+.alerts--tl .alert--success .alert__container a:hover,
+.alerts--tl .alert--warning .alert__container a:hover,
+.alerts--tl .alert--danger .alert__container a:hover,
+.alerts--tc .alert--info .alert__container a:hover,
+.alerts--tc .alert--success .alert__container a:hover,
+.alerts--tc .alert--warning .alert__container a:hover,
+.alerts--tc .alert--danger .alert__container a:hover,
+.alerts--tr .alert--info .alert__container a:hover,
+.alerts--tr .alert--success .alert__container a:hover,
+.alerts--tr .alert--warning .alert__container a:hover,
+.alerts--tr .alert--danger .alert__container a:hover,
+.alerts--bl .alert--info .alert__container a:hover,
+.alerts--bl .alert--success .alert__container a:hover,
+.alerts--bl .alert--warning .alert__container a:hover,
+.alerts--bl .alert--danger .alert__container a:hover,
+.alerts--bc .alert--info .alert__container a:hover,
+.alerts--bc .alert--success .alert__container a:hover,
+.alerts--bc .alert--warning .alert__container a:hover,
+.alerts--bc .alert--danger .alert__container a:hover,
+.alerts--br .alert--info .alert__container a:hover,
+.alerts--br .alert--success .alert__container a:hover,
+.alerts--br .alert--warning .alert__container a:hover,
+.alerts--br .alert--danger .alert__container a:hover {
+    text-decoration: none;
+}
+
+[dir] .alerts--tl,
+[dir] .alerts--tr {
+    transform: translateY(8px);
+}
+
+[dir=ltr] .alerts--tc {
+    transform: translate(-50%, 8px);
+}
+
+[dir=rtl] .alerts--tc {
+    transform: translate(50%, 8px);
+}
+
+[dir=ltr] .alerts--bc {
+    transform: translateX(-50%);
+}
+
+[dir=rtl] .alerts--bc {
+    transform: translateX(50%);
+}
+
+.alerts--bl,
+.alerts--bc,
+.alerts--br {
+    bottom: 8px;
+}
+
+[dir=ltr] .alerts--tl,
+[dir=ltr] .alerts--bl {
+    left: 8px;
+}
+
+[dir=rtl] .alerts--tl,
+[dir=rtl] .alerts--bl {
+    right: 8px;
+}
+
+[dir=ltr] .alerts--tr,
+[dir=ltr] .alerts--br {
+    right: 8px;
+}
+
+[dir=rtl] .alerts--tr,
+[dir=rtl] .alerts--br {
+    left: 8px;
+}
+
+.alerts--tc,
+.alerts--bc {
+    max-width: 1200px;
+}
+
+[dir=ltr] .alerts--tc,
+[dir=ltr] .alerts--bc {
+    left: 50%;
+}
+
+[dir=rtl] .alerts--tc,
+[dir=rtl] .alerts--bc {
+    right: 50%;
+}
+
+.alert--default .alert__container:before {
+    color: var(--primary-color);
+}
+
+[dir] .alert--default .alert__container:after {
+    background-color: var(--primary-color);
+}
+
+.alert--info .alert__container:before {
+    content: "";
+}
+
+.alert--success .alert__container:before {
+    content: "";
+}
+
+.alert--warning .alert__container:before {
+    content: "";
+}
+
+.alert--danger .alert__container:before {
+    content: "";
+}
+
+.alert__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+[dir] .alert__container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.alert__container:before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    content: "";
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    position: relative;
+    z-index: 2;
+}
+
+[dir] .alert__container:before {
+    border-radius: 50%;
+    border: 1px solid currentColor;
+    text-align: center;
+}
+
+[dir=ltr] .alert__container:before {
+    margin-right: 32px;
+}
+
+[dir=rtl] .alert__container:before {
+    margin-left: 32px;
+}
+
+.alert__container:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    opacity: .1;
+}
+
+[dir] .alert__container:after {
+    background-color: currentColor;
+}
+
+[dir=ltr] .alert__container:after {
+    margin-left: 56px;
+    transform: translateX(-100%);
+}
+
+[dir=rtl] .alert__container:after {
+    margin-right: 56px;
+    transform: translateX(100%);
+}
+
+.alert__box {
+    position: relative;
+    flex: 1 1 10px;
+}
+
+.alert__box>div {
+    transition: opacity 400ms cubic-bezier(0.17, 0.67, 0.54, 1);
+}
+
+.alert__link {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+[dir=ltr] .alert__link {
+    left: 0;
+}
+
+[dir=rtl] .alert__link {
+    right: 0;
+}
+
+.alert__link:hover~div {
+    opacity: .5;
+}
+
+.alert__title {
+    font-size: var(--text-font-size-large);
+    font-weight: 700;
+}
+
+.alert__title+.alert__body {
+    font-size: var(--heading-6-font-size);
+}
+
+[dir] .alert__title+.alert__body {
+    margin-top: 8px;
+}
+
+.alert__body h1,
+.alert__body h2,
+.alert__body h3,
+.alert__body h4 {
+    font-size: var(--text-font-size-large);
+}
+
+[dir] .alert__body>* {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+[dir] .alert__body>*+* {
+    margin-top: 8px;
+}
+
+.alert__close {
+    align-self: flex-start;
+}
+
+[dir=ltr] .alert__close {
+    margin-left: 12px;
+}
+
+[dir=rtl] .alert__close {
+    margin-right: 12px;
+}
+
+@media (max-width: 567px) {
+    [dir=ltr] .alert__container:before,
+    [dir=ltr] .alert__container:after {
+        display: none;
+    }
+    .alerts--tl,
+    .alerts--bl {
+        width: 100%;
+    }
+    [dir=ltr] .alerts--tl,
+    [dir=ltr] .alerts--bl {
+        left: 0;
+    }
+    [dir=rtl] .alerts--tl,
+    [dir=rtl] .alerts--bl {
+        right: 0;
+    }
+    .alerts--bl,
+    .alerts--bc,
+    .alerts--br {
+        bottom: 0;
+    }
+    [dir] .alert__body {
+        line-height: 1.2;
+    }
+    .alert__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        margin: 0 !important;
+        z-index: 99;
+    }
+    .alert__title {
+        padding-right: 40px;
+    }
+}

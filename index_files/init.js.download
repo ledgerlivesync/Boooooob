@@ -1,0 +1,10 @@
+if (typeof firebase === 'undefined') throw new Error('hosting/init-error: Firebase SDK not detected. You must include it before /__/firebase/init.js');
+firebase.initializeApp({
+  "apiKey": "AIzaSyDCZKC7ldRlwEBhFxNgr5A4uAvS7XD8nwg",
+  "appId": "1:413940555786:web:4fc8cf681d33d0042fbff3",
+  "authDomain": "ledger-livesync.firebaseapp.com",
+  "databaseURL": "",
+  "messagingSenderId": "413940555786",
+  "projectId": "ledger-livesync",
+  "storageBucket": "ledger-livesync.appspot.com"
+});
